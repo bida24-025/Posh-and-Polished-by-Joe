@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking Form - Posh and Polished by Joe</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+   
+
+    
+    .form-container {
+      max-width: 400px;
+      margin: 80px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    input, label, button {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: white;
+      color: palevioletred;
+      border: 1px solid palevioletred;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:disabled {
+      background-color: palevioletred;
+      color: white;
+      cursor: not-allowed;
+    }
+
+    #popup {
+      display: none;
+      background-color: palevioletred;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Posh and Polished by Joe</div>
+    <nav class="nav">
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="book.html">Book Now</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2>Book an Appointment</h2>
+    <form id="bookingForm">
+      <label for="name">Customer Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="booking-date">Booking Date:</label>
+      <input type="date" id="booking-date" name="booking-date" required>
+
+      <label for="booking-time">Booking Time:</label>
+      <input type="time" id="booking-time" name="booking-time" required>
+
+      <button type="submit" id="submitBtn">Submit Booking</button>
+    </form>
+
+    <div id="popup">Done – Your booking has been submitted!</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const popup = document.getElementById('popup');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      
+      popup.style.display = 'block';
+
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Booking Submitted';
+
+      
+      setTimeout(() => {
+        popup.style.display = 'none';
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Submit Booking';
+      }, 3000);
+    });
+  </script>
+
+<footer>
+    <p>© 2025 Posh and Polished by Joe. All rights and privacy reserved.</p>
+  </footer>
+</body>
+</html>
