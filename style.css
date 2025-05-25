@@ -10,13 +10,14 @@ body {
   }
 
   .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color:#fff ;
-  color: white;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff ;
+    padding: 20px 40px;
+    border-bottom: 2px solid white;
+    
+  }
 
 @media (max-width: 768px) {
   .nav {
