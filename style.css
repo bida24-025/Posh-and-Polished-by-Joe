@@ -10,50 +10,61 @@ body {
     background-color: #e91e63;
   }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a:hover {
+  background-color: #e91e63;
+  color: white;
+  border-radius: 5px;
+}
+
+
+@media (min-width: 600px) {
   .header {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    background-color: #fff ;
-    padding: 20px 40px;
-    border-bottom: 2px solid white;
-    
-  }
-
- 
-  .logo {
-    
-    color: #e91e63  ; 
-    font-size: 2.5em;
-    font-weight: bold;
     text-align: left;
+    padding: 20px 40px;
   }
 
- 
-  .nav {
-    display: flex;
-    gap: 15px;
+  .logo {
+    margin-bottom: 0;
   }
-
-  .nav a {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: pink; 
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  .nav a:hover {
-    background-color: #e91e63 ;
-  }
+}
 
   .center-text {
     text-align:center;
   }
-
-  
 
   .reviews-container {
   display: flex;
