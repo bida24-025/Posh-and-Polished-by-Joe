@@ -58,73 +58,6 @@
       line-height: 1.6;
     }
 
-<style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #e91e63;
-    padding: 15px 20px;
-    color: white;
-    position: relative;
-  }
-
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  .nav {
-    display: flex;
-    gap: 15px;
-  }
-
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .nav {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #e91e63;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    .nav.show {
-      display: flex;
-    }
-
-    .menu-toggle {
-      display: block;
-    }
-  }
-</style>
 
     
   </style>
@@ -132,9 +65,9 @@
 <body>
 
  <header class="header">
-    <div class="logo">Services - Posh and Polished by Joe</div>
+    <div class="logo">Posh and Polished by Joe</div>
     <nav class="nav">
-      <a href="Posh and Polished by Joe.html">Home</a>
+      <a href="services.html">Services</a>
       <a href="pricing.html">Pricing</a>
       <a href="contact.html">Contact</a>
       <a href="book.html">Book Now</a>
@@ -159,15 +92,6 @@
   <footer>
     <p>© 2025 Posh and Polished by Joe. All rights and privacy reserved.</p>
   </footer>
-  <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-</script>
-
 
 </body>
 </html>
